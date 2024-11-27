@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	
+	<flow name="hellomuleFlow" doc:id="30d34f0b-0f20-4cfc-816d-7341e7c30280" >
+		<http:listener doc:name="Listener" doc:id="c71f0d85-6999-43a3-b0bf-8cce7c432e46" config-ref="HTTP_Listener_config" path="/hellomule"/>
+		<set-payload value='#["Hello Mule Seshu"]' doc:name="Set Payload" doc:id="1c5058f9-acaf-464b-9f06-2c863ee419df" />
+	</flow>
+</mule>
